@@ -8,6 +8,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
       price: "",
       description: "",
       imageUrl: "",
+      modelnumber: "",
     }
   );
 
@@ -42,6 +43,8 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
         onChange={handleChange}
         required
       />
+        <label>Model Number</label>
+      <input name="modelnumber" value={formData.modelnumber} onChange={handleChange} required />
 
       <label>Description</label>
       <textarea
