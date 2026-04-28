@@ -19,6 +19,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Form data being submitted:", formData);
     onSubmit({
       ...formData,
       price: Number(formData.price),
@@ -44,7 +45,11 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
         required
       />
         <label>Model Number</label>
-      <input name="modelnumber" value={formData.modelnumber} onChange={handleChange} required />
+      <input 
+      name="modelnumber" 
+      value={formData.modelnumber} 
+      onChange={handleChange} 
+      required />
 
       <label>Description</label>
       <textarea

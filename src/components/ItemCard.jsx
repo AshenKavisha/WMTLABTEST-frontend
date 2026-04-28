@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 function ItemCard({ item, onDelete }) {
+  console.log("Item data in ItemCard:", item);
   return (
     <div className="card">
       <img
